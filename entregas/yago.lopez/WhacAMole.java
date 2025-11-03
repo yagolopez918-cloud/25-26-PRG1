@@ -1,20 +1,23 @@
 import java.util.Scanner;
+import java.util.Random;
 
 class WhacAMole{
     public static void main(String[] args) {
-        final String AGUJERO = "(  )";
-        final String AGUJERO_CON_MONIGOTE = "('')";
-        final String AGUJERO_GOLPEADO = "[[]]";
-        final String AGUJERO_MONIGOTE_GOLPEADO = "[**]";
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-        final int DIMENSIONES = 8;
-        final int NUMERO_CASILLAS = DIMENSIONES * DIMENSIONES;
-        for(int posicionImpresion = 1; posicionImpresion <= NUMERO_CASILLAS; posicionImpresion++){
+        final String Agujero = "( )";
+        final String AgujeroMonigote = "(``)";
+        final String AgujeroGolpeado = "[[]]";
+        final String AgujeroMonigoteGolpeado = "[**]";
+        final int DIMENSIONES = 4;
 
-            System.out.println(AGUJERO);
-            if(posicionImpresion % DIMENSIONES == 0){
-                System.out.println();
+        for(int fila = 0; fila <4; fila++){
+            for(int columna = 0; columna<4; columna++){
+                System.out.println(Agujero);
             }
         }
+
+        scanner.close();   
     }
 }
